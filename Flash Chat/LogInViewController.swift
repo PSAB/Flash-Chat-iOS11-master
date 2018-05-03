@@ -24,7 +24,7 @@ class LogInViewController: UIViewController {
     @IBAction func logInPressed(_ sender: Any) {
         Auth.auth().signIn(withEmail: emailTextfield.text!, password: passwordTextfield.text!) { (user, error) in
             if error != nil {
-                print("issues with signing in buddy: \(error!.localizedDescription)")
+                print("issues with signing in: \(error!.localizedDescription)")
             }
             else {
                 print("sign in successful")
